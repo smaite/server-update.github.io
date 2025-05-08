@@ -31,6 +31,7 @@ The update server exposes the following endpoints:
 - `releases/` - Contains release metadata JSON files
 - `server.js` - The main server script
 - `admin.js` - Admin utility for managing releases
+- `src/functions/` - Netlify serverless functions
 
 ## Using the Admin Tool
 
@@ -57,6 +58,44 @@ private updateServerUrl: string = 'http://localhost:3005/api/updates/latest';
 ```
 
 For production, you would change this to your hosted server URL.
+
+## Deploying to Netlify
+
+### Prerequisites
+
+1. Install the Netlify CLI:
+   ```
+   npm install -g netlify-cli
+   ```
+
+2. Login to Netlify:
+   ```
+   netlify login
+   ```
+
+### Deployment Steps
+
+1. Initialize a new Netlify site (first time only):
+   ```
+   netlify init
+   ```
+
+2. Build and deploy the site:
+   ```
+   netlify deploy --prod
+   ```
+
+3. Once deployed, update your application's `UpdateService.ts` to point to your Netlify URL:
+   ```typescript
+   private customServerUrl: string = 'https://your-netlify-site.netlify.app/.netlify/functions/updates';
+   ```
+
+### Important Netlify Configuration
+
+- The `netlify.toml` file configures how the site is built and deployed
+- The serverless function in `src/functions/updates.js` handles all API requests
+- Release files are stored in the `releases` directory
+- Download files are served from the `public/downloads` directory
 
 ## Testing Updates
 
