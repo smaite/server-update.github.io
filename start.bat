@@ -1,0 +1,3 @@
+@echo off
+echo Starting NepalBooks Update Server...
+node server.js 

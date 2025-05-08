@@ -1,0 +1,24 @@
+{
+  "tag_name": "v1.0.2",
+  "name": "NepalBooks v1.0.2",
+  "body": "- Added: Auto-update feature\n- Fixed: Dashboard chart display issues\n- Improved: Application performance\n- Updated: Dependencies to latest versions",
+  "published_at": "2025-05-08T10:00:00Z",
+  "assets": [
+    {
+      "platform": "win",
+      "browser_download_url": "http://localhost:3005/downloads/NepalBooks-1.0.2-win.exe",
+      "name": "NepalBooks-1.0.2-win.exe"
+    },
+    {
+      "platform": "mac",
+      "browser_download_url": "http://localhost:3005/downloads/NepalBooks-1.0.2-mac.dmg",
+      "name": "NepalBooks-1.0.2-mac.dmg"
+    },
+    {
+      "platform": "linux",
+      "browser_download_url": "http://localhost:3005/downloads/NepalBooks-1.0.2-linux.AppImage",
+      "name": "NepalBooks-1.0.2-linux.AppImage"
+    }
+  ],
+  "mandatory": false
+} 
