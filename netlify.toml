@@ -1,5 +1,5 @@
 [build]
-  base = "server-update/"
+  base = "/"
   publish = "public/"
   command = "npm run build"
 
